@@ -1,13 +1,13 @@
 :root {
-  --bg: #101210;
-  --surface: #171a17;
-  --surface-2: #1d211d;
+  --bg: #101827;
+  --surface: #172033;
+  --surface-2: #202b42;
   --text: #f0f1eb;
   --muted: #a0a69d;
   --soft: #737b72;
   --line: rgba(235,240,230,.14);
-  --accent: #c6e56b;
-  --dark: #171a13;
+  --accent: #8b5cf6;
+  --dark: #0b1220;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -125,7 +125,7 @@ button { font: inherit; }
   transition: transform .2s, background .2s;
 }
 .button:hover { transform: translateY(-3px); }
-.button-dark { background: var(--accent); color: #171a13; }
+.button-dark { background: var(--accent); color: #0b1220; }
 .button-light { border: 1px solid var(--line); color: var(--text); }
 .hero-meta { display: flex; flex-wrap: wrap; gap: 25px; color: var(--soft); margin-top: 55px; }
 
@@ -260,7 +260,7 @@ button { font: inherit; }
 .tool strong { font: 500 16px "Space Grotesk"; }
 .tool small { color: var(--soft); font-size: 7px; }
 
-.contact { background: #c6e56b; color: #151911; }
+.contact { background: #8b5cf6; color: #151911; }
 .contact-inner { max-width: 1440px; margin: auto; padding: 95px 7% 85px; }
 .contact .section-label, .contact .eyebrow { color: #414b2d; }
 .contact .section-label { display: block; border-bottom: 1px solid rgba(20,25,15,.25); padding-bottom: 17px; }
@@ -697,15 +697,15 @@ button { font: inherit; }
    ========================================== */
 
 :root {
-  --bg: #0c0d0f;
-  --surface: #121417;
-  --surface-2: #191c20;
+  --bg: #101827;
+  --surface: #172033;
+  --surface-2: #202b42;
   --text: #f2f2ef;
   --muted: #a0a4aa;
   --soft: #747981;
   --line: rgba(255,255,255,.12);
-  --accent: #c6e56b;
-  --dark: #101113;
+  --accent: #8b5cf6;
+  --dark: #0b1220;
 }
 
 html {
@@ -722,7 +722,7 @@ body {
 
 ::selection {
   background: var(--accent);
-  color: #101113;
+  color: #0b1220;
 }
 
 /* Navigation */
@@ -776,7 +776,7 @@ body {
 
 .nav-links .nav-cta:hover {
   background: var(--accent);
-  color: #101113;
+  color: #0b1220;
   border-color: var(--accent);
 }
 
@@ -897,7 +897,7 @@ body {
 }
 
 .visual-core {
-  background: #171a17;
+  background: #172033;
   border: 1px solid rgba(198,229,107,.4);
   box-shadow: 0 0 70px rgba(198,229,107,.06);
 }
@@ -1398,5 +1398,89 @@ button:focus-visible {
 
   .hero h1 {
     font-size: clamp(34px, 9vw, 48px);
+  }
+}
+
+/* ===== DCO PROFESSIONAL VIOLET DESIGN ===== */
+
+:root {
+  --accent: #a78bfa;
+  --accent-bright: #8b5cf6;
+  --lavender: #c4b5fd;
+  --pink: #f472b6;
+  --line: rgba(196, 181, 253, .18);
+}
+
+::selection {
+  background: #a78bfa;
+  color: #101827;
+}
+
+/* Hero background glow */
+.hero-visual {
+  background:
+    radial-gradient(circle at 35% 35%, rgba(139, 92, 246, .22), transparent 55%),
+    radial-gradient(circle at 75% 75%, rgba(244, 114, 182, .12), transparent 50%);
+}
+
+/* Violet and pink accents */
+.hero h1 span,
+.section h2 span,
+.contact h2 span {
+  background: linear-gradient(100deg, #c4b5fd, #a78bfa, #f472b6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.button-dark {
+  background: linear-gradient(110deg, #8b5cf6, #a78bfa);
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(139, 92, 246, .2);
+}
+
+.button-dark:hover {
+  box-shadow: 0 10px 30px rgba(244, 114, 182, .2);
+}
+
+/* Project showcase */
+.project-card:hover {
+  border-color: rgba(167, 139, 250, .75);
+}
+
+.project-art {
+  background:
+    radial-gradient(ellipse at 50% 70%, rgba(139, 92, 246, .18), transparent 60%),
+    #101827;
+}
+
+/* Contact section */
+.contact-links {
+  color: var(--lavender);
+}
+
+.contact-links a {
+  transition: color .2s ease;
+}
+
+.contact-links a:hover {
+  color: var(--pink);
+}
+
+/* Subtle polished hover effects */
+.text-link:hover,
+.project-arrow:hover {
+  color: var(--pink);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--lavender);
+}
+
+/* Mobile spacing */
+@media (max-width: 650px) {
+  .hero-visual.profile-visual {
+    margin-top: 10px;
   }
 }
