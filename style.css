@@ -1742,3 +1742,85 @@ button:focus-visible {
     margin-top: 32px;
   }
 }
+
+/* ===== REFINED CONTACT EXPERIENCE ===== */
+
+.contact-options-intro {
+  max-width: 760px;
+  margin-top: 38px;
+}
+
+.contact-option-label {
+  display: block;
+  color: #e9ddff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.contact-options-intro p,
+.direct-email-card p {
+  color: #e5dcf7;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 10px;
+}
+
+.contact-form {
+  margin-top: 22px;
+  padding: 34px;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: 16px;
+  background: linear-gradient(145deg, #151827, #10131f);
+  box-shadow: 0 24px 65px rgba(35,15,70,.25);
+}
+
+.contact-submit {
+  min-height: 54px;
+  padding: 0 26px;
+  border-radius: 8px;
+}
+
+.direct-email-card {
+  max-width: 760px;
+  margin-top: 25px;
+  padding: 26px 30px;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 12px;
+  background: rgba(30,20,55,.2);
+}
+
+.direct-email-card .contact-email {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 17px;
+  padding-bottom: 7px;
+  color: #fff;
+  font-size: clamp(15px, 2.4vw, 23px);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,.6);
+}
+
+.direct-email-card .contact-email:hover {
+  color: #eee2ff;
+}
+
+@media (max-width: 650px) {
+  .contact-options-intro {
+    margin-top: 30px;
+  }
+
+  .contact-form {
+    padding: 23px 17px;
+  }
+
+  .direct-email-card {
+    padding: 23px 18px;
+  }
+
+  .direct-email-card .contact-email {
+    font-size: 15px;
+  }
+}
