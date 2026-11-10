@@ -1484,3 +1484,250 @@ button:focus-visible {
     margin-top: 10px;
   }
 }
+
+/* ===== PROFESSIONAL CERTIFICATIONS GALLERY ===== */
+
+.certifications-section {
+  margin-top: 75px;
+  padding-top: 55px;
+  border-top: 1px solid var(--line);
+}
+
+.certifications-heading {
+  max-width: 650px;
+  margin-bottom: 35px;
+}
+
+.certifications-heading h3 {
+  font: 500 clamp(30px, 4vw, 46px)/1.15
+       "Space Grotesk", sans-serif;
+  letter-spacing: -1.8px;
+}
+
+.certifications-heading h3 span {
+  color: var(--accent);
+}
+
+.certifications-heading > p:last-child {
+  margin-top: 15px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.certification-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  transition: border-color .25s, transform .25s;
+}
+
+.certification-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.certification-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 210px;
+  padding: 15px;
+  background: #0c0e10;
+  border-bottom: 1px solid var(--line);
+}
+
+.certification-image img {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: contain;
+  transition: transform .3s;
+}
+
+.certification-image:hover img {
+  transform: scale(1.025);
+}
+
+.certification-image > span {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  padding: 9px 12px;
+  background: rgba(10, 12, 15, .9);
+  color: var(--accent);
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.certification-info {
+  padding: 25px;
+}
+
+.certification-info h4 {
+  margin: 12px 0;
+  font: 500 20px/1.4 "Space Grotesk", sans-serif;
+}
+
+.certification-info > p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.certification-date {
+  display: block;
+  margin-top: 18px;
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+@media (max-width: 650px) {
+  .certifications-section {
+    margin-top: 50px;
+    padding-top: 40px;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .certification-image {
+    min-height: 190px;
+  }
+
+  .certification-image img {
+    height: 190px;
+  }
+
+  .certification-info {
+    padding: 22px;
+  }
+}
+
+
+/* ===== CONTACT FORM ===== */
+.contact-form {
+  max-width: 760px;
+  margin-top: 38px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  background: #111827;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 14px;
+  color: #fff;
+  box-shadow: 0 18px 50px rgba(25,15,55,.18);
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-field label {
+  color: #c4b5fd;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid rgba(196,181,253,.22);
+  border-radius: 7px;
+  outline: none;
+  background: #1b2435;
+  color: #fff;
+  font: 400 13px "Space Grotesk", sans-serif;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.form-field input {
+  min-height: 49px;
+}
+
+.form-field textarea {
+  min-height: 150px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #8992a5;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(167,139,250,.13);
+}
+
+.contact-submit {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  min-height: 48px;
+  padding: 0 23px;
+  border: 0;
+  border-radius: 6px;
+  background: linear-gradient(110deg, #8b5cf6, #a78bfa);
+  color: #fff;
+  font: 700 10px "Space Grotesk", sans-serif;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.contact-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 25px rgba(139,92,246,.3);
+}
+
+.contact-honeypot {
+  position: absolute;
+  left: -5000px;
+}
+
+.contact-email {
+  margin-top: 28px;
+}
+
+@media (max-width: 650px) {
+  .contact-form {
+    padding: 22px 17px;
+    gap: 20px;
+  }
+
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-submit {
+    width: 100%;
+  }
+}

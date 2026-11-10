@@ -70,7 +70,7 @@
 
   <section class="section featured" id="work">
     <div class="section-top">
-      <span class="section-label">01 / FEATURED PROJECT</span>
+      <span class="section-label">01 / SELECTED PROJECTS</span>
       <span class="section-note">SELECTED WORK</span>
     </div>
     <div class="featured-heading">
@@ -111,7 +111,37 @@
         <span class="project-arrow">↗</span>
       </div>
     </a>
-    <p class="project-footnote">01 PROJECT / LIVE PLATFORM</p>
+
+    <a class="project-card" href="https://investigative-academy.vercel.app" target="_blank" rel="noopener noreferrer">
+      <div class="project-art">
+        <img
+          src="IMG_20261110_130230_541.jpg"
+          alt="Investigative Academy learner dashboard"
+          class="project-preview"
+          loading="lazy"
+        >
+      </div>
+      <div class="project-details">
+        <div>
+          <span class="project-category">INVESTIGATIVE EDUCATION · OBSERVATION SKILLS</span>
+          <h3>Investigative Academy</h3>
+          <p>
+            An interactive investigative development platform designed
+            to sharpen observation, develop critical thinking and build
+            understanding of human behaviour through structured lessons
+            and practical missions.
+          </p>
+          <div class="project-tags">
+            <span>Investigative Training</span>
+            <span>Observation Skills</span>
+            <span>Human Behaviour</span>
+            <span>Critical Thinking</span>
+          </div>
+        </div>
+        <span class="project-arrow">↗</span>
+      </div>
+    </a>
+    <p class="project-footnote">02 PROJECTS / LIVE PLATFORMS</p>
   </section>
 
   <section class="section expertise" id="expertise">
@@ -243,6 +273,70 @@
       </div>
     </article>
 
+
+    <div class="certifications-section" id="certifications">
+      <div class="certifications-heading">
+        <p class="eyebrow">PROFESSIONAL DEVELOPMENT</p>
+        <h3>Certifications & <span>professional training.</span></h3>
+        <p>
+          Professional learning and completed training programmes
+          across cybersecurity and threat intelligence.
+        </p>
+      </div>
+
+      <div class="certifications-grid">
+
+        <article class="certification-card">
+          <a class="certification-image"
+             href="certificates/hack-fix-ccsc.png"
+             target="_blank" rel="noopener noreferrer">
+            <img src="certificates/hack-fix-ccsc.png"
+                 alt="Hack and Fix Cybersecurity Career Starter Certification">
+            <span>VIEW CERTIFICATE ↗</span>
+          </a>
+          <div class="certification-info">
+            <span class="education-category">CYBERSECURITY CERTIFICATION</span>
+            <h4>Cybersecurity Career Starter Certification (CCSC)</h4>
+            <p>Hack & Fix Academy</p>
+            <span class="certification-date">DECEMBER 28, 2025</span>
+          </div>
+        </article>
+
+        <article class="certification-card">
+          <a class="certification-image"
+             href="certificates/arcx-threat-intelligence-analyst.jpg"
+             target="_blank" rel="noopener noreferrer">
+            <img src="certificates/arcx-threat-intelligence-analyst.jpg"
+                 alt="arcX Foundation Level Threat Intelligence Analyst Certification">
+            <span>VIEW CERTIFICATE ↗</span>
+          </a>
+          <div class="certification-info">
+            <span class="education-category">THREAT INTELLIGENCE</span>
+            <h4>Cyber Threat Intelligence 101</h4>
+            <p>arcX — Foundation Level Threat Intelligence Analyst</p>
+            <span class="certification-date">MAY 28, 2026</span>
+          </div>
+        </article>
+
+        <article class="certification-card">
+          <a class="certification-image"
+             href="certificates/xpsec-google-hacking.png"
+             target="_blank" rel="noopener noreferrer">
+            <img src="certificates/xpsec-google-hacking.png"
+                 alt="XPSEC Academy Google Hacking for Offsec training certificate">
+            <span>VIEW CERTIFICATE ↗</span>
+          </a>
+          <div class="certification-info">
+            <span class="education-category">SECURITY TRAINING</span>
+            <h4>Google Hacking for Offsec</h4>
+            <p>XPSEC Academy</p>
+            <span class="certification-date">CERTIFICATE OF COMPLETION</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
     <div class="education-connection">
       <span class="education-line"></span>
       <p>
@@ -338,11 +432,62 @@
       <span class="section-label">07 / CONTACT</span>
       <p class="eyebrow">HAVE A QUESTION OR AN IDEA?</p>
       <h2>Let's start a<br><span>conversation.</span></h2>
+
       <p class="contact-copy">
         For professional enquiries, collaboration and cybersecurity discussions,
         feel free to reach out.
       </p>
-      <a class="contact-email" href="mailto:dcocybersolutions@gmail.com">dcocybersolutions@gmail.com ↗</a>
+
+      <form class="contact-form"
+            action="https://formsubmit.co/dcocybersolutions@gmail.com"
+            method="POST">
+
+        <input type="hidden" name="_subject"
+               value="New portfolio enquiry — DCO Cyber Solutions">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+
+        <div class="contact-honeypot" aria-hidden="true">
+          <label>Leave this field empty
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off">
+          </label>
+        </div>
+
+        <div class="contact-form-grid">
+          <div class="form-field">
+            <label for="contact-name">YOUR NAME</label>
+            <input type="text" id="contact-name" name="name"
+                   placeholder="Enter your name" autocomplete="name" required>
+          </div>
+
+          <div class="form-field">
+            <label for="contact-email">EMAIL ADDRESS</label>
+            <input type="email" id="contact-email" name="email"
+                   placeholder="you@example.com" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="contact-subject">SUBJECT</label>
+          <input type="text" id="contact-subject" name="subject"
+                 placeholder="What is this enquiry about?" required>
+        </div>
+
+        <div class="form-field">
+          <label for="contact-message">YOUR MESSAGE</label>
+          <textarea id="contact-message" name="message" rows="6"
+                    placeholder="Write your message here..." required></textarea>
+        </div>
+
+        <button type="submit" class="contact-submit">
+          SEND MESSAGE <span aria-hidden="true">↗</span>
+        </button>
+      </form>
+
+      <a class="contact-email" href="mailto:dcocybersolutions@gmail.com">
+        Or email directly: dcocybersolutions@gmail.com ↗
+      </a>
+
       <div class="contact-links">
         <a href="https://github.com/davidchimburuomaodum" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
         <a href="https://www.instagram.com/dco_cyber_solutions/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
