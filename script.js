@@ -61,3 +61,37 @@ if ("IntersectionObserver" in window) {
 
   sections.forEach(section => navObserver.observe(section));
 }
+
+
+// WhatsApp contact form
+const whatsappForm = document.getElementById("whatsapp-contact-form");
+
+if (whatsappForm) {
+  whatsappForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById("contact-name").value.trim();
+    const email = document.getElementById("contact-email").value.trim();
+    const subject = document.getElementById("contact-subject").value.trim();
+    const message = document.getElementById("contact-message").value.trim();
+
+    const whatsappNumber = "2349125747577";
+
+    const text = [
+      "NEW PORTFOLIO ENQUIRY",
+      "",
+      "Name: " + name,
+      "Email: " + email,
+      "Subject: " + subject,
+      "",
+      "Message:",
+      message
+    ].join("\n");
+
+    const whatsappURL =
+      "https://wa.me/" + whatsappNumber + "?text=" +
+      encodeURIComponent(text);
+
+    window.location.href = whatsappURL;
+  });
+}
