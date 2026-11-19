@@ -1844,3 +1844,252 @@ button:focus-visible {
   background: var(--accent);
   color: #101110;
 }
+
+/* =========================================
+   DAVID CHIMBURUOMA ODUM
+   FUTURISTIC PERSONAL PORTFOLIO UPGRADE
+========================================= */
+
+:root {
+  --bg: #080d18;
+  --surface: #101a2b;
+  --surface-2: #17243a;
+  --text: #edf4ff;
+  --muted: #a2b1c5;
+  --soft: #73849c;
+  --line: rgba(125, 180, 255, .16);
+  --accent: #8b5cf6;
+  --dark: #080d18;
+  --cyan: #48d9ee;
+}
+
+/* Futuristic page atmosphere */
+body {
+  background:
+    radial-gradient(ellipse at 85% 8%, rgba(72,217,238,.07), transparent 35%),
+    radial-gradient(ellipse at 5% 35%, rgba(139,92,246,.08), transparent 35%),
+    var(--bg);
+}
+
+.header {
+  background: rgba(8,13,24,.91);
+  border-bottom-color: rgba(72,217,238,.16);
+}
+
+/* Navigation */
+.brand span {
+  color: var(--cyan);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--cyan);
+}
+
+.nav-links .nav-cta {
+  border-color: rgba(72,217,238,.4);
+}
+
+/* Hero section */
+.hero {
+  background:
+    radial-gradient(ellipse at 80% 45%, rgba(72,217,238,.09), transparent 40%),
+    radial-gradient(ellipse at 15% 75%, rgba(139,92,246,.09), transparent 40%);
+}
+
+.hero h1 {
+  text-shadow: 0 0 35px rgba(72,217,238,.08);
+}
+
+.hero h1 span,
+.section h2 span {
+  color: var(--cyan);
+}
+
+.status-dot {
+  background: var(--cyan);
+  box-shadow: 0 0 14px rgba(72,217,238,.8);
+}
+
+.button-dark {
+  background: linear-gradient(110deg, #48d9ee, #9b7bff);
+  color: #08111d;
+}
+
+.hero-visual {
+  background: radial-gradient(
+    circle,
+    rgba(72,217,238,.12),
+    rgba(139,92,246,.06) 45%,
+    transparent 72%
+  );
+}
+
+.hero-profile-photo {
+  border: 1px solid rgba(72,217,238,.55);
+  box-shadow:
+    0 0 35px rgba(72,217,238,.13),
+    0 0 90px rgba(139,92,246,.12);
+}
+
+/* Project cards */
+.project-card {
+  background: linear-gradient(145deg, #111d30, #0c1422);
+  border: 1px solid rgba(72,217,238,.18);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 55px rgba(0,0,0,.16);
+  transition: transform .3s ease, border-color .3s ease,
+              box-shadow .3s ease;
+}
+
+.project-card:hover {
+  border-color: rgba(72,217,238,.65);
+  box-shadow: 0 18px 55px rgba(72,217,238,.08);
+  transform: translateY(-5px);
+}
+
+.project-art {
+  background:
+    linear-gradient(rgba(72,217,238,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(72,217,238,.035) 1px, transparent 1px),
+    radial-gradient(ellipse at center, rgba(139,92,246,.16), transparent 65%),
+    #0a1220;
+  background-size: 30px 30px, 30px 30px, auto, auto;
+  border-bottom: 1px solid var(--line);
+}
+
+.project-art img {
+  border-radius: 5px;
+}
+
+.project-category {
+  color: var(--cyan);
+}
+
+.project-details h3 {
+  color: #f1f6ff;
+}
+
+.project-tags span {
+  background: rgba(72,217,238,.035);
+  border-color: rgba(72,217,238,.2);
+  border-radius: 4px;
+}
+
+.project-footnote {
+  color: var(--cyan);
+}
+
+/* Investigative Academy graphic */
+.academy-art {
+  min-height: 350px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.academy-visual {
+  position: relative;
+  width: min(310px, 85%);
+  height: 245px;
+  display: grid;
+  place-items: center;
+}
+
+.academy-orbit {
+  position: absolute;
+  width: 205px;
+  height: 205px;
+  border: 1px solid rgba(72,217,238,.35);
+  border-radius: 50%;
+  box-shadow: 0 0 35px rgba(72,217,238,.06);
+}
+
+.orbit-a {
+  transform: rotateX(65deg) rotateZ(25deg);
+}
+
+.orbit-b {
+  width: 165px;
+  height: 165px;
+  border-color: rgba(155,123,255,.55);
+  transform: rotateY(65deg) rotateZ(-25deg);
+}
+
+.academy-core {
+  width: 130px;
+  height: 130px;
+  border: 1px solid rgba(72,217,238,.65);
+  border-radius: 50%;
+  background: linear-gradient(145deg, #182b42, #101628);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  box-shadow: 0 0 55px rgba(72,217,238,.14);
+  z-index: 2;
+}
+
+.academy-core > span {
+  font: 700 45px "Space Grotesk", sans-serif;
+  color: var(--cyan);
+}
+
+.academy-core small {
+  font-size: 7px;
+  letter-spacing: 1px;
+  color: #c7d9ee;
+}
+
+.academy-caption {
+  position: absolute;
+  bottom: 0;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: var(--cyan);
+}
+
+/* Expertise and section details */
+.expertise-item {
+  border-color: var(--line);
+}
+
+.item-number,
+.item-symbol {
+  color: var(--cyan);
+}
+
+.section-label,
+.section-note {
+  color: var(--cyan);
+}
+
+/* Smooth interactive effects */
+.project-tags span,
+.nav-links a,
+.button {
+  transition: all .25s ease;
+}
+
+::selection {
+  background: var(--cyan);
+  color: #08111d;
+}
+
+/* Mobile adjustments */
+@media (max-width: 650px) {
+  .academy-art {
+    min-height: 270px;
+  }
+
+  .academy-visual {
+    height: 220px;
+  }
+
+  .project-card:hover {
+    transform: none;
+  }
+}
+
