@@ -2933,3 +2933,17 @@ body > .footer {
     transform: none !important;
   }
 }
+
+/* DCO CyberQuiz screenshot-only project card */
+.cyberquiz-card .project-art {
+  padding: 0;
+  min-height: 0;
+  background: #0a1220;
+}
+
+.cyberquiz-card .project-preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
