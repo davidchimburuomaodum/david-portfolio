@@ -2111,3 +2111,24 @@ body {
   border-radius: 0;
 }
 
+
+/* Natural image sizing for Investigative Academy */
+.academy-art {
+  width: 100%;
+  min-height: 0;
+  height: auto;
+  aspect-ratio: auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+.academy-art .project-preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0;
+}
+
