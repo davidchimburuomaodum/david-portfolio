@@ -69,48 +69,26 @@
   </section>
 
 
-  <section class="scroll-lab" id="scroll-lab" aria-label="Interactive 3D digital forensics experience">
+  <section class="scroll-lab" id="scroll-lab" aria-label="Interactive exploded 3D digital forensics workstation">
     <div class="scroll-lab-sticky">
       <div class="scroll-lab-copy">
-        <p class="scroll-lab-eyebrow">SCROLL-DRIVEN 3D EXPERIENCE</p>
-        <h2>Digital evidence.<br><span>Seen in a new dimension.</span></h2>
-        <p>Exploring the intersection of digital forensics, cybersecurity and investigative technology.</p>
-        <div class="scroll-lab-hint">SCROLL TO ROTATE <span>↓</span></div>
+        <p class="scroll-lab-eyebrow">DCO · DIGITAL FORENSICS EXPERIENCE</p>
+        <h2>Explore what lies<br><span>beneath the surface.</span></h2>
+        <p>A closer look at the technology behind digital investigation, evidence analysis and cybersecurity.</p>
+        <div class="scroll-lab-hint">SCROLL TO EXPLORE <span>↓</span></div>
       </div>
 
-      <div class="forensic-scene" aria-hidden="true">
-        <div class="forensic-orbit forensic-orbit-one"></div>
-        <div class="forensic-orbit forensic-orbit-two"></div>
-        <div class="forensic-orbit forensic-orbit-three"></div>
-
-        <div class="forensic-object" id="forensic-object">
-          <div class="forensic-face forensic-front">
-            <span class="forensic-shield">D</span>
-            <small>DIGITAL EVIDENCE</small>
-          </div>
-          <div class="forensic-face forensic-back">
-            <span>DF</span>
-            <small>FORENSICS</small>
-          </div>
-          <div class="forensic-face forensic-right">
-            <span>01</span>
-            <small>ANALYSE</small>
-          </div>
-          <div class="forensic-face forensic-left">
-            <span>02</span>
-            <small>INVESTIGATE</small>
-          </div>
-          <div class="forensic-face forensic-top"></div>
-          <div class="forensic-face forensic-bottom"></div>
-        </div>
-
-        <div class="forensic-data forensic-data-one">EVIDENCE // 001</div>
-        <div class="forensic-data forensic-data-two">SYSTEM STATUS: SECURE</div>
-        <div class="forensic-data forensic-data-three">DCO CYBER SYSTEMS</div>
+      <div class="forensic-scene">
+        <canvas id="forensic-canvas" aria-label="Animated 3D exploded laptop workstation"></canvas>
+        <div class="forensic-label label-screen">DISPLAY MODULE</div>
+        <div class="forensic-label label-board">MOTHERBOARD</div>
+        <div class="forensic-label label-memory">MEMORY MODULE</div>
+        <div class="forensic-label label-storage">DATA STORAGE</div>
+        <div class="forensic-label label-core">PROCESSING UNIT</div>
       </div>
 
       <div class="scroll-lab-footer">
-        <span>DCO CYBERSECURITY · DIGITAL FORENSICS</span>
+        <span>SCROLL-DRIVEN 3D · DCO CYBERSECURITY</span>
         <span id="forensic-progress">01 / 100</span>
       </div>
     </div>
@@ -585,5 +563,6 @@
 </footer>
 
 <script src="script.js"></script>
+<script type="module" src="3d-scene.js"></script>
 </body>
 </html>

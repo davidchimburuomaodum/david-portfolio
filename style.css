@@ -2416,3 +2416,200 @@ body {
   .scroll-lab-hint span { animation: none; }
 }
 
+
+/* EXPLODED 3D WORKSTATION */
+.scroll-lab {
+  height: 190vh;
+  position: relative;
+  overflow: clip;
+  background:
+    radial-gradient(ellipse at 70% 48%, rgba(40,180,220,.12), transparent 42%),
+    radial-gradient(ellipse at 30% 55%, rgba(112,75,220,.12), transparent 45%),
+    #080d18;
+  border-block: 1px solid rgba(72,217,238,.18);
+}
+
+.scroll-lab-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  min-height: 580px;
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  align-items: center;
+  padding: 65px 7%;
+  overflow: hidden;
+}
+
+.scroll-lab-sticky::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .18;
+  background-image:
+    linear-gradient(rgba(72,217,238,.13) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(72,217,238,.13) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(ellipse, black, transparent 75%);
+}
+
+.scroll-lab-copy {
+  position: relative;
+  z-index: 3;
+  max-width: 480px;
+}
+
+.scroll-lab-eyebrow {
+  color: var(--cyan);
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  margin-bottom: 22px;
+}
+
+.scroll-lab-copy h2 {
+  color: #edf4ff;
+  font-size: clamp(34px, 4.5vw, 62px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+  margin-bottom: 22px;
+}
+
+.scroll-lab-copy h2 span {
+  color: var(--cyan);
+}
+
+.scroll-lab-copy > p:not(.scroll-lab-eyebrow) {
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 14px;
+}
+
+.scroll-lab-hint {
+  margin-top: 38px;
+  color: var(--cyan);
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.scroll-lab-hint span {
+  display: inline-block;
+  margin-left: 8px;
+  animation: forensic-arrow 1.5s infinite;
+}
+
+@keyframes forensic-arrow {
+  50% { transform: translateY(7px); }
+}
+
+.forensic-scene {
+  height: min(70vh, 650px);
+  min-height: 320px;
+  position: relative;
+  z-index: 2;
+}
+
+#forensic-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  outline: none;
+}
+
+.forensic-label {
+  position: absolute;
+  z-index: 2;
+  color: var(--cyan);
+  background: rgba(8,13,24,.78);
+  border: 1px solid rgba(72,217,238,.25);
+  padding: 7px 10px;
+  font-size: 7px;
+  letter-spacing: 1.4px;
+  pointer-events: none;
+  opacity: .85;
+}
+
+.label-screen { top: 12%; right: 4%; }
+.label-board { top: 45%; left: 0; }
+.label-memory { bottom: 22%; left: 6%; }
+.label-storage { bottom: 12%; right: 5%; }
+.label-core { top: 25%; left: 8%; }
+
+.scroll-lab-footer {
+  position: absolute;
+  bottom: 25px;
+  left: 7%;
+  right: 7%;
+  z-index: 4;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding-top: 15px;
+  color: var(--soft);
+  font-size: 8px;
+  letter-spacing: 1.2px;
+}
+
+@media(max-width:700px) {
+  .scroll-lab { height: 175vh; }
+
+  .scroll-lab-sticky {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    align-content: center;
+    padding: 80px 6% 65px;
+    gap: 0;
+  }
+
+  .scroll-lab-copy {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .scroll-lab-eyebrow {
+    font-size: 8px;
+    margin-bottom: 12px;
+  }
+
+  .scroll-lab-copy h2 {
+    font-size: clamp(31px, 8vw, 43px);
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+  }
+
+  .scroll-lab-copy > p:not(.scroll-lab-eyebrow) {
+    font-size: 11px;
+    line-height: 1.65;
+    max-width: 350px;
+    margin: auto;
+  }
+
+  .scroll-lab-hint {
+    margin-top: 15px;
+    font-size: 8px;
+  }
+
+  .forensic-scene {
+    height: 38vh;
+    min-height: 240px;
+    max-height: 350px;
+    margin-top: 5px;
+  }
+
+  .forensic-label {
+    font-size: 6px;
+    padding: 5px 6px;
+  }
+
+  .scroll-lab-footer {
+    bottom: 15px;
+    font-size: 6px;
+    letter-spacing: .6px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .scroll-lab-hint span { animation: none; }
+}
