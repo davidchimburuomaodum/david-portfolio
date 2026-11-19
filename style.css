@@ -2132,3 +2132,287 @@ body {
   border-radius: 0;
 }
 
+
+/* =========================================
+   SCROLL-CONTROLLED 3D FORENSICS EXPERIENCE
+========================================= */
+
+.scroll-lab {
+  height: 190vh;
+  position: relative;
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(72,217,238,.09), transparent 40%),
+    radial-gradient(ellipse at 30% 50%, rgba(139,92,246,.10), transparent 45%),
+    #080d18;
+  border-top: 1px solid rgba(72,217,238,.14);
+  border-bottom: 1px solid rgba(72,217,238,.14);
+}
+
+.scroll-lab-sticky {
+  height: 100vh;
+  height: 100svh;
+  min-height: 620px;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  align-items: center;
+  padding: 70px 8%;
+}
+
+.scroll-lab-sticky::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .16;
+  background-image:
+    linear-gradient(rgba(72,217,238,.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(72,217,238,.12) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse, black, transparent 75%);
+}
+
+.scroll-lab-copy {
+  position: relative;
+  z-index: 3;
+  max-width: 510px;
+}
+
+.scroll-lab-eyebrow {
+  color: var(--cyan);
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.scroll-lab-copy h2 {
+  font-size: clamp(35px, 5vw, 68px);
+  line-height: 1.08;
+  letter-spacing: -2.5px;
+  color: #edf4ff;
+  margin-bottom: 24px;
+}
+
+.scroll-lab-copy h2 span {
+  color: var(--cyan);
+}
+
+.scroll-lab-copy > p:not(.scroll-lab-eyebrow) {
+  max-width: 420px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.scroll-lab-hint {
+  margin-top: 45px;
+  color: var(--cyan);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.scroll-lab-hint span {
+  display: inline-block;
+  margin-left: 10px;
+  animation: forensic-arrow 1.5s infinite;
+}
+
+@keyframes forensic-arrow {
+  50% { transform: translateY(7px); }
+}
+
+.forensic-scene {
+  position: relative;
+  min-height: 450px;
+  display: grid;
+  place-items: center;
+  perspective: 1100px;
+  z-index: 2;
+}
+
+.forensic-object {
+  --turn-x: -20deg;
+  --turn-y: 25deg;
+  --turn-z: 0deg;
+  position: relative;
+  width: 190px;
+  height: 190px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(var(--turn-x)) rotateY(var(--turn-y)) rotateZ(var(--turn-z));
+  will-change: transform;
+  z-index: 3;
+}
+
+.forensic-face {
+  position: absolute;
+  inset: 0;
+  width: 190px;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1px solid rgba(72,217,238,.7);
+  background: linear-gradient(145deg, rgba(21,47,70,.96), rgba(10,17,34,.97));
+  box-shadow: inset 0 0 35px rgba(72,217,238,.10);
+  backface-visibility: visible;
+}
+
+.forensic-face small {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #b9d9e8;
+}
+
+.forensic-shield {
+  width: 75px;
+  height: 85px;
+  display: grid;
+  place-items: center;
+  color: var(--cyan);
+  font-size: 44px;
+  font-weight: 700;
+  border: 2px solid var(--cyan);
+  clip-path: polygon(50% 0, 95% 18%, 88% 75%, 50% 100%, 12% 75%, 5% 18%);
+  filter: drop-shadow(0 0 15px rgba(72,217,238,.7));
+}
+
+.forensic-front { transform: translateZ(95px); }
+.forensic-back { transform: rotateY(180deg) translateZ(95px); }
+.forensic-right { transform: rotateY(90deg) translateZ(95px); }
+.forensic-left { transform: rotateY(-90deg) translateZ(95px); }
+.forensic-top { transform: rotateX(90deg) translateZ(95px); }
+.forensic-bottom { transform: rotateX(-90deg) translateZ(95px); }
+
+.forensic-back span,
+.forensic-right span,
+.forensic-left span {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--cyan);
+}
+
+.forensic-orbit {
+  position: absolute;
+  width: 390px;
+  height: 390px;
+  border: 1px solid rgba(72,217,238,.23);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.forensic-orbit-one {
+  transform: rotateX(70deg) rotateZ(25deg);
+}
+
+.forensic-orbit-two {
+  width: 330px;
+  height: 330px;
+  border-color: rgba(139,92,246,.45);
+  transform: rotateY(68deg) rotateZ(-25deg);
+}
+
+.forensic-orbit-three {
+  width: 450px;
+  height: 450px;
+  border-style: dashed;
+  border-color: rgba(72,217,238,.13);
+  transform: rotateX(75deg);
+}
+
+.forensic-data {
+  position: absolute;
+  padding: 10px 13px;
+  border: 1px solid rgba(72,217,238,.3);
+  background: rgba(8,13,24,.85);
+  color: var(--cyan);
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  z-index: 4;
+}
+
+.forensic-data-one { top: 16%; right: 0; }
+.forensic-data-two { bottom: 20%; right: 0; }
+.forensic-data-three { bottom: 12%; left: 0; }
+
+.scroll-lab-footer {
+  position: absolute;
+  bottom: 28px;
+  left: 8%;
+  right: 8%;
+  display: flex;
+  justify-content: space-between;
+  color: var(--soft);
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+
+/* Mobile layout */
+@media (max-width: 700px) {
+  .scroll-lab {
+    height: 165vh;
+  }
+
+  .scroll-lab-sticky {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    align-content: center;
+    padding: 85px 7% 75px;
+    gap: 5px;
+  }
+
+  .scroll-lab-copy {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .scroll-lab-eyebrow {
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+
+  .scroll-lab-copy h2 {
+    font-size: clamp(31px, 8vw, 44px);
+    letter-spacing: -1.5px;
+    margin-bottom: 12px;
+  }
+
+  .scroll-lab-copy > p:not(.scroll-lab-eyebrow) {
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 0 auto;
+  }
+
+  .scroll-lab-hint {
+    margin-top: 17px;
+    font-size: 8px;
+  }
+
+  .forensic-scene {
+    min-height: 300px;
+    transform: scale(.76);
+    transform-origin: center center;
+    margin-top: -10px;
+  }
+
+  .scroll-lab-footer {
+    left: 7%;
+    right: 7%;
+    bottom: 18px;
+    font-size: 7px;
+    letter-spacing: .8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-lab-hint span { animation: none; }
+}
+

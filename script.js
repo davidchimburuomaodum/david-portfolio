@@ -95,3 +95,53 @@ if (whatsappForm) {
     window.location.href = whatsappURL;
   });
 }
+
+/* Scroll-controlled 3D digital forensics object */
+(() => {
+  const section = document.getElementById("scroll-lab");
+  const object = document.getElementById("forensic-object");
+  const progressLabel = document.getElementById("forensic-progress");
+
+  if (!section || !object) return;
+
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  let ticking = false;
+
+  function updateForensicScene() {
+    const rect = section.getBoundingClientRect();
+    const distance = section.offsetHeight - window.innerHeight;
+
+    const progress = reducedMotion
+      ? 0
+      : Math.max(0, Math.min(1, -rect.top / Math.max(distance, 1)));
+
+    const x = -20 + progress * 48;
+    const y = 25 + progress * 360;
+    const z = progress * 22;
+
+    object.style.setProperty("--turn-x", `${x}deg`);
+    object.style.setProperty("--turn-y", `${y}deg`);
+    object.style.setProperty("--turn-z", `${z}deg`);
+
+    if (progressLabel) {
+      progressLabel.textContent =
+        `${String(Math.round(progress * 100)).padStart(2, "0")} / 100`;
+    }
+
+    ticking = false;
+  }
+
+  function requestUpdate() {
+    if (!ticking) {
+      ticking = true;
+      window.requestAnimationFrame(updateForensicScene);
+    }
+  }
+
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate);
+  updateForensicScene();
+})();
