@@ -2947,3 +2947,66 @@ body > .footer {
   height: auto;
   object-fit: contain;
 }
+
+
+/* DCO ADSTERRA ADVERTISEMENTS */
+.dco-ad-section,
+.dco-sponsored-ad {
+  width: 100%;
+  padding: 55px 6%;
+  background: var(--surface, #151715);
+  border-top: 1px solid var(--line, #292d29);
+  border-bottom: 1px solid var(--line, #292d29);
+}
+
+.dco-ad-inner,
+.dco-sponsored-inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dco-ad-label {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--muted, #999);
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.dco-sponsored-inner h2 {
+  margin: 0 0 12px;
+  color: var(--text, #f1f1f1);
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.dco-sponsored-inner p {
+  color: var(--muted, #999);
+  margin-bottom: 24px;
+}
+
+.dco-sponsored-inner a {
+  display: inline-block;
+  padding: 15px 24px;
+  background: var(--accent, #b9ff66);
+  color: #101110;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  transition: opacity .2s ease;
+}
+
+.dco-sponsored-inner a:hover {
+  opacity: .8;
+}
+
+@media (max-width: 600px) {
+  .dco-ad-section,
+  .dco-sponsored-ad {
+    padding: 38px 5%;
+  }
+}
